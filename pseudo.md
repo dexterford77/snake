@@ -31,6 +31,8 @@ snake head div:  200px 200px
 
 ## Model
 
+- init: generate random food, only head, set head location, direction
+
 - board edges:
     top: 0
     left: 0
@@ -62,15 +64,28 @@ snake head div:  200px 200px
 - random food position
     - generate random coords
 
+- collision check
+  - if head exceeds bounds or the head === a body/tail coord: GAME OVER
 
 ## View
 
+- game start
 - render
+  - for each snake coord, generate <div class="snake">, top @ Y, left @ X
+  - same for food, but class="food"
 - keydown listener
-
+  - jQuery
+  - output direction value
+- game over/restart
 
 ## Controller
 
-- init: setInterval
-- callback
+- callback gets direction from view, uses to change model direction
 
+- init:
+  - model.init
+  - views.init
+  setInterval
+  - model.move in direction (inc. food eat check)
+  - model.collision check
+  - render
