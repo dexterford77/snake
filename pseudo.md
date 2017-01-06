@@ -71,21 +71,21 @@ snake head div:  200px 200px
 
 - game start
 - render
+  - if not GAME OVER:
   - for each snake coord, generate <div class="snake">, top @ Y, left @ X
   - same for food, but class="food"
 - keydown listener
   - jQuery
-  - output direction value
 - game over/restart
 
 ## Controller
 
-- callback gets direction from view, uses to change model direction
+- callback: output direction value based on what it hears from view.listener (onkey handler)
 
 - init:
   - model.init
-  - views.init
+  - views.init(callback)
   setInterval
-  - model.move in direction (inc. food eat check)
-  - model.collision check
-  - render
+  - | model.move in direction (inc. food eat check)
+  - | model.collision check
+  - view.render
