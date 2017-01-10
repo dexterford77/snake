@@ -1,0 +1,37 @@
+body {
+  background-image: url(usa_desert.jpg);
+}
+
+#board {
+  position: relative;
+  display: inline-block;
+  height: 500px;
+  width: 700px;
+  border: 6px groove gold;
+  background-color: pink;
+  background-image: url(desert.jpg);
+}
+
+#board-info {
+  width: 620px;
+  text-align: center;
+  margin: 125px auto;
+  position: relative;
+}
+
+.boardBlock {
+  position: absolute;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.snake {
+  background-color: #4DD007;
+  border: 1px solid black;
+}
+
+.food {
+  background-color: orange;
+  border: 1px solid black;
+}
