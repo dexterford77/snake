@@ -1,6 +1,6 @@
 # Snake
 
-Demo
+Launched Demo
 --------
 
 [Play the demo!](https://rawgit.com/dexterford77/snake/master/snake.html)
